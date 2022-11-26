@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_expedientes",
+  "info": {
+    "singularName": "tipo-expediente",
+    "pluralName": "tipo-expedientes",
+    "displayName": "TipoExpediente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "NombreExpediente": {
+      "type": "string"
+    },
+    "expedientes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::expediente.expediente"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_pacientes",
+  "info": {
+    "singularName": "estado-paciente",
+    "pluralName": "estado-pacientes",
+    "displayName": "EstadoPaciente",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Estado": {
+      "type": "string"
+    },
+    "expedientes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::expediente.expediente",
+      "mappedBy": "estado_paciente"
+    },
+    "hospital": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::hospital.hospital",
+      "inversedBy": "estado_pacientes"
+    }
+  }
+}

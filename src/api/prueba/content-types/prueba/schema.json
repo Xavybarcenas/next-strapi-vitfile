@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pruebas",
+  "info": {
+    "singularName": "prueba",
+    "pluralName": "pruebas",
+    "displayName": "prueba",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "identificacion": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "identificacion"
+    }
+  }
+}
